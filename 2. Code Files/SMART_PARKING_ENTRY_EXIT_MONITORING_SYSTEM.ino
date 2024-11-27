@@ -189,25 +189,21 @@ void displayInitialMessage() {
   display.display();
 }
 
-void runStartupAnimation() {    //Logic by Sarbik
-  int a = 0, b = 169;  //to not waste time to 200th frame
-
-  // Forward animation loop
-  while (a <= 170) {
+void runStartupAnimation() {
+  // Forward animation loop (a goes from 0 to 200)
+  for (int a = 0; a <= 200; a++) {
     display.clearDisplay();
     display.setTextColor(SSD1306_WHITE);
-    display.drawBitmap(0, 0, epd_bitmap_allArray[a], 128, 64, WHITE);
+    display.drawBitmap(0, 0, bitmap_Array[a], 128, 64, WHITE);
     display.display();
-    a++;
   }
 
-  // Reverse animation loop
-  while (b >= 120) {       //to reverse till 120th frame
+  // Reverse animation loop (b goes from 199 to 0)
+  for (int b = 199; b >=0; b--) {
     display.clearDisplay();
     display.setTextColor(SSD1306_WHITE);
-    display.drawBitmap(0, 0, epd_bitmap_allArray[b], 128, 64, WHITE);
+    display.drawBitmap(0, 0, bitmap_Array[b], 128, 64, WHITE);
     display.display();
-    b--;
   }
 }
 
