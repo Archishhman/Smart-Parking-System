@@ -194,7 +194,7 @@ void runStartupAnimation() {
   for (int a = 0; a <= 200; a++) {
     display.clearDisplay();
     display.setTextColor(SSD1306_WHITE);
-    display.drawBitmap(0, 0, bitmap_Array[a], 128, 64, WHITE);
+    display.drawBitmap(0, 0, epd_bitmap_allArray[a], 128, 64, WHITE);
     display.display();
   }
 
@@ -202,7 +202,7 @@ void runStartupAnimation() {
   for (int b = 199; b >=0; b--) {
     display.clearDisplay();
     display.setTextColor(SSD1306_WHITE);
-    display.drawBitmap(0, 0, bitmap_Array[b], 128, 64, WHITE);
+    display.drawBitmap(0, 0, epd_bitmap_allArray[b], 128, 64, WHITE);
     display.display();
   }
 }
